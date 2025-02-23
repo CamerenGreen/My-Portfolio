@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Cameren's Personal Website</title>
     <style>
         /* General Styles */
         body {
@@ -123,11 +123,36 @@
     <div id="welcome-message" style="position: fixed; top: 0; left: 0; width: 100%; background-color: #0073e6; color: #fff; padding: 20px; text-align: center; z-index: 1000;">
         <span>Thank you so much for visiting! Feel free to further <a href="https://www.linkedin.com/in/cameren-green-830164244/" target="_blank" style="color: #fff; text-decoration: underline;">connect</a> with me!</span>
         <button onclick="document.getElementById('welcome-message').style.display='none'" style="background: none; border: none; color: #fff; font-size: 1.2em; margin-left: 20px; cursor: pointer;">&times;</button>
+        <script>
+            var welcomeMessage = document.getElementById('welcome-message');
+            var closeButtonClicked = false;
+
+            window.addEventListener('scroll', function() {
+            if (closeButtonClicked) return;
+
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var maxScroll = 200; // Adjust this value as needed
+            var opacity = Math.max(0, 1 - scrollTop / maxScroll);
+            welcomeMessage.style.opacity = opacity;
+            if (opacity === 0) {
+                welcomeMessage.style.display = 'none';
+            } else {
+                welcomeMessage.style.display = 'block';
+            }
+            });
+
+            function closeWelcomeMessage() {
+            closeButtonClicked = true;
+            welcomeMessage.style.display = 'none';
+            }
+
+            document.querySelector('#welcome-message button').addEventListener('click', closeWelcomeMessage);
+        </script>
     </div>
     <div class="container">
         <!-- Header -->
         <header>
-            <h1>Cameren Green</h1>
+            <h1>Hey! My name is Cameren Green</h1>
             <p>University of Kansas | Computer Science Major | Software Engineer & AI/ML Enthusiast</p>
         </header>
 
@@ -142,38 +167,43 @@
         <section id="about">
             <h2>About Me</h2>
             <div style="display: flex; align-items: center;"></div>
+
             <p>
                 Hello! I'm a sophomore at the University of Kansas (KU), majoring in Computer Science. My passion lies in software engineering and artificial intelligence/machine learning. I enjoy solving complex problems and building innovative solutions that make a difference.
             </p>
             <p>
                 I'm currently enhancing my skills in programming, algorithms, and data structures while exploring the fascinating world of AI/ML. Outside of academics, I participate in coding competitions and contribute to open-source projects.
             </p>
+            <p>
+                You can view my resume <a href="Cameren_Green_Resume_2025.pdf" target="_blank">here</a>.
+            </p>
         </section>
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>Projects</h2>
+            <h2>Projects <span style="font-size: 0.6em; color: #0073e6;">Check out some of my creations</span></h2>
             <div class="project">
-                <h3>Project 1: AI-Powered Discord Chatbot</h3>
-                <p>
-                    Developed a chatbot using JavaScript and TensorFlow to assist users with FAQs. Integrated natural language processing (NLP) to improve user interaction.
-                </p>
-                <a href="https://github.com/CamerenGreen/Personal-Discord-Chatbot">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Project 2: Personal Portfolio Website</h3>
-                <p>
-                    Designed and built a responsive personal website using HTML, CSS, and JavaScript to showcase my skills and projects.
-                </p>
-                <a href="index.html">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Project 3: Calculator</h3>
+                <h3>Project 1: Calculator</h3>
                 <p>
                     An advanced calculator application developed using HTML, CSS, and JavaScript, featuring a user-friendly interface and capable of performing a variety of arithmetic operations with precision.
                 </p>
                 <a href="calculator.html">View Project</a>
             </div>
+            <div class="project">
+                <h3>Project 2: AI-Powered Discord Chatbot</h3>
+                <p>
+                    Developed a chatbot using JavaScript and TensorFlow to assist users with FAQs fueled by the powerful ChatGPT-3. Integrated natural language processing (NLP) and user question tracking to improve user interaction.
+                </p>
+                <a href="https://github.com/CamerenGreen/Personal-Discord-Chatbot">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 3: Personal Portfolio Website</h3>
+                <p>
+                    Designed and built a responsive personal website using HTML, CSS, and JavaScript to showcase my skills and projects.
+                </p>
+                <a href="index.html">View Project</a>
+            </div>
+
         </section>
 
         <!-- Contact Section -->

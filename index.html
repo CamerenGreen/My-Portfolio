@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #0073e6;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #0073e6;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 40px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            color: #0073e6;
+            border-bottom: 2px solid #0073e6;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            font-size: 1.4em;
+            margin: 0;
+            color: #333;
+        }
+
+        .project p {
+            margin: 10px 0;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #0073e6;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .project a:hover {
+            background-color: #005bb5;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div id="welcome-message" style="position: fixed; top: 0; left: 0; width: 100%; background-color: #0073e6; color: #fff; padding: 20px; text-align: center; z-index: 1000;">
+        <span>Thank you so much for visiting! Feel free to further <a href="https://www.linkedin.com/in/cameren-green-830164244/" target="_blank" style="color: #fff; text-decoration: underline;">connect</a> with me!</span>
+        <button onclick="document.getElementById('welcome-message').style.display='none'" style="background: none; border: none; color: #fff; font-size: 1.2em; margin-left: 20px; cursor: pointer;">&times;</button>
+    </div>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Cameren Green</h1>
+            <p>University of Kansas | Computer Science Major | Software Engineer & AI/ML Enthusiast</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div style="display: flex; align-items: center;"></div>
+            <p>
+                Hello! I'm a sophomore at the University of Kansas (KU), majoring in Computer Science. My passion lies in software engineering and artificial intelligence/machine learning. I enjoy solving complex problems and building innovative solutions that make a difference.
+            </p>
+            <p>
+                I'm currently enhancing my skills in programming, algorithms, and data structures while exploring the fascinating world of AI/ML. Outside of academics, I participate in coding competitions and contribute to open-source projects.
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1: AI-Powered Discord Chatbot</h3>
+                <p>
+                    Developed a chatbot using JavaScript and TensorFlow to assist users with FAQs. Integrated natural language processing (NLP) to improve user interaction.
+                </p>
+                <a href="https://github.com/CamerenGreen/Personal-Discord-Chatbot">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 2: Personal Portfolio Website</h3>
+                <p>
+                    Designed and built a responsive personal website using HTML, CSS, and JavaScript to showcase my skills and projects.
+                </p>
+                <a href="index.html">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 3: Calculator</h3>
+                <p>
+                    An advanced calculator application developed using HTML, CSS, and JavaScript, featuring a user-friendly interface and capable of performing a variety of arithmetic operations with precision.
+                </p>
+                <a href="calculator.html">View Project</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                <p style="text-align: center; font-size: 1.3em; color: #000; font-weight: bold;">
+                I'd Love to connect with you.
+            <p>
+                <div style = "text-align: center;">
+                Feel free to reach out if you'd like to collaborate or get to know more about me!
+            </p>
+            <div style="text-align: center; margin-top: 20px;">
+                <p>
+                    <strong>Email:</strong> 
+                    <a href="mailto:cgreen7241@ku.edu">cgreen7241@ku.edu</a>
+                </p>
+                <p>
+                    <strong>LinkedIn:</strong> 
+                    <a href="https://www.linkedin.com/in/cameren-green-830164244/" target="_blank">linkedin.com/in/cameren-green-830164244</a>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 Cameren Green. All rights reserved.
+    </footer>
+</body>
+</html>

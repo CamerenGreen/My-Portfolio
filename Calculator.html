@@ -50,9 +50,12 @@
             <button class="button" onclick="appendNumber('9')">9</button>
             <button class="button" onclick="setOperation('*')">x</button>
             <button class="button" onclick="appendNumber('0')">0</button>
+            <button class="button" onclick="appendDecimal()">.</button>
             <button class="button" onclick="clearDisplay()">C</button>
             <button class="button" onclick="calculateResult()">=</button>
             <button class="button" onclick="setOperation('/')">/</button>
+            <button class="button" onclick="setOperation('^')">^</button>
+            <button class="button" onclick="squareNumber()">^2</button>
         </div>
     </div>
 
@@ -69,6 +72,12 @@
 
         function appendNumber(number) {
             display.value += number;
+        }
+
+        function appendDecimal() {
+            if (!display.value.includes('.')) {
+                display.value += '.';
+            }
         }
 
         function setOperation(operation) {
@@ -95,6 +104,9 @@
                 case '/':
                     result = firstOperand / secondOperand;
                     break;
+                case '^':
+                    result = Math.pow(firstOperand, secondOperand);
+                    break;
                 default:
                     return;
             }
@@ -117,6 +129,14 @@
             let li = document.createElement('li');
             li.textContent = calculation;
             recentCalculations.insertBefore(li, recentCalculations.firstChild);
+        }
+
+        function squareNumber() {
+            if (display.value === '') return;
+            let number = parseFloat(display.value);
+            let result = Math.pow(number, 2);
+            display.value = result;
+            addRecentCalculation(`${number} ^ 2 = ${result}`);
         }
     </script>
 </body>

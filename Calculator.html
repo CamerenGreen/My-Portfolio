@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
         .calculator {
             border: 1px solid #000;
             display: inline-block;
@@ -52,10 +59,10 @@
             <button class="button" onclick="appendNumber('0')">0</button>
             <button class="button" onclick="appendDecimal()">.</button>
             <button class="button" onclick="clearDisplay()">C</button>
-            <button class="button" onclick="calculateResult()">=</button>
             <button class="button" onclick="setOperation('/')">/</button>
             <button class="button" onclick="setOperation('^')">^</button>
-            <button class="button" onclick="squareNumber()">^2</button>
+            <button class="button" onclick="negateNumber()">±</button>
+            <button class="button" style="grid-column: span 2;" onclick="calculateResult()">=</button>
         </div>
     </div>
 
@@ -70,6 +77,10 @@
         let firstOperand = null;
         let recentCalculations = document.getElementById('recentCalculations');
 
+        function negateNumber() {
+            if (display.value === '') return;
+            display.value = -parseFloat(display.value);
+        }
         function appendNumber(number) {
             display.value += number;
         }

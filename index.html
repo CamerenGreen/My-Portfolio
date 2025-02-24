@@ -39,12 +39,12 @@
         header h1 {
             font-size: 2.5em;
             margin: 0;
-            color: #0073e6;
+            color: #5e7396;
         }
 
         header p {
             font-size: 1.2em;
-            color: #666;
+            color: #635e92;
         }
 
         /* Navigation */
@@ -60,7 +60,7 @@
         }
 
         nav a:hover {
-            color: #0073e6;
+            color: #5e7396;
         }
 
         /* Sections */
@@ -70,8 +70,8 @@
 
         section h2 {
             font-size: 1.8em;
-            color: #0073e6;
-            border-bottom: 2px solid #0073e6;
+            color: #5e7396;
+            border-bottom: 2px solid #5e7396;
             padding-bottom: 5px;
             margin-bottom: 20px;
         }
@@ -100,13 +100,13 @@
             display: inline-block;
             margin-top: 10px;
             padding: 5px 10px;
-            background-color: #0073e6;
+            background-color: #5e7396;
             color: #fff;
             border-radius: 3px;
         }
 
         .project a:hover {
-            background-color: #005bb5;
+            background-color: #925e8d;
         }
 
         /* Footer */
@@ -115,12 +115,12 @@
             margin-top: 40px;
             padding: 20px 0;
             border-top: 1px solid #ddd;
-            color: #666;
+            color: #635e92;
         }
     </style>
 </head>
 <body>
-    <div id="welcome-message" style="position: fixed; top: 0; left: 0; width: 100%; background-color: #0073e6; color: #fff; padding: 20px; text-align: center; z-index: 1000;">
+    <div id="welcome-message" style="position: fixed; top: 0; left: 0; width: 100%; background-color: #5e7396; color: #fff; padding: 20px; text-align: center; z-index: 1000;">
         <span>Thank you so much for visiting! Feel free to further <a href="https://www.linkedin.com/in/cameren-green-830164244/" target="_blank" style="color: #fff; text-decoration: underline;">connect</a> with me!</span>
         <button onclick="document.getElementById('welcome-message').style.display='none'" style="background: none; border: none; color: #fff; font-size: 1.2em; margin-left: 20px; cursor: pointer;">&times;</button>
         <script>
@@ -131,7 +131,7 @@
             if (closeButtonClicked) return;
 
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var maxScroll = 200; // Adjust this value as needed
+            var maxScroll = 70; // Adjust this value as needed
             var opacity = Math.max(0, 1 - scrollTop / maxScroll);
             welcomeMessage.style.opacity = opacity;
             if (opacity === 0) {
@@ -151,7 +151,7 @@
     </div>
     <div class="container">
         <!-- Header -->
-        <header>
+        <header style="margin-top: 80px;">
             <h1>Hey! My name is Cameren Green</h1>
             <p>University of Kansas | Computer Science Major | Software Engineer & AI/ML Enthusiast</p>
         </header>
@@ -181,7 +181,7 @@
 
         <!-- Projects Section -->
         <section id="projects">
-            <h2>Projects <span style="font-size: 0.6em; color: #0073e6;">Check out some of my creations</span></h2>
+            <h2 id="projects-title">Projects <span style="font-size: 0.6em; color: #5e7396;">Check out some of my creations</span></h2>
             <div class="project">
                 <h3>Project 1: Calculator</h3>
                 <p>
@@ -211,7 +211,7 @@
             <h2>Contact</h2>
             <p>
                 <p style="text-align: center; font-size: 1.3em; color: #000; font-weight: bold;">
-                I'd Love to connect with you.
+                I'd love to connect with you.
             <p>
                 <div style = "text-align: center;">
                 Feel free to reach out if you'd like to collaborate or get to know more about me!
@@ -231,7 +231,7 @@
 
     <!-- Footer -->
     <footer>
-        &copy; 2023 Cameren Green. All rights reserved.
+        &copy; 2023 Cameren Green. All rights reserved 
     </footer>
 </body>
 </html>

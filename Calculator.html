@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE MathML PUBLIC "-//W3C//DTD MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,35 +39,60 @@
             font-size: 2.4em;
             cursor: pointer;
         }
+        body {
+            background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+            background-size: 800% 800%;
+            animation: rainbow 10s ease infinite;
+        }
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .calculator, .recents {
+            background-color: rgb(148, 148, 148);
+        }
+        
     </style>
 </head>
 <body>
     <div class="calculator">
         <input type="text" class="display" id="display" disabled>
         <div class="buttons">
-            <button class="button" onclick="appendNumber('1')">1</button>
-            <button class="button" onclick="appendNumber('2')">2</button>
-            <button class="button" onclick="appendNumber('3')">3</button>
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="sine()">sin</button>
+            <button class="button" onclick="cosine()">cos</button>
+            <button class="button" onclick="tangent()">tan</button>
+            <button class="button" onclick="deleteLastCharacter()">del</button>
+            <button class="button" onclick="appendNumber('7')">7</button>
+            <button class="button" onclick="appendNumber('8')">8</button>
+            <button class="button" onclick="appendNumber('9')">9</button>
             <button class="button" onclick="setOperation('+')">+</button>
             <button class="button" onclick="appendNumber('4')">4</button>
             <button class="button" onclick="appendNumber('5')">5</button>
             <button class="button" onclick="appendNumber('6')">6</button>
             <button class="button" onclick="setOperation('-')">-</button>
-            <button class="button" onclick="appendNumber('7')">7</button>
-            <button class="button" onclick="appendNumber('8')">8</button>
-            <button class="button" onclick="appendNumber('9')">9</button>
-            <button class="button" onclick="setOperation('*')">x</button>
+            <button class="button" onclick="appendNumber('1')">1</button>
+            <button class="button" onclick="appendNumber('2')">2</button>
+            <button class="button" onclick="appendNumber('3')">3</button>
+            <button class="button" onclick="setOperation('/')">/</button>
             <button class="button" onclick="appendNumber('0')">0</button>
             <button class="button" onclick="appendDecimal()">.</button>
-            <button class="button" onclick="clearDisplay()">C</button>
-            <button class="button" onclick="setOperation('/')">/</button>
             <button class="button" onclick="setOperation('^')">^</button>
-            <button class="button" onclick="negateNumber()">±</button>
-            <button class="button" style="grid-column: span 2;" onclick="calculateResult()">=</button>
+            <button class="button" onclick="setOperation('*')">x</button>
+            <button class="button" onclick="squareNumber('x²')">x²</button>
+            <button class="button" onclick="squareRoot('sqrt')">√</button>
+            <button class="button" onclick="logarithm('log')">log</button>
+            <button class="button" onclick="appendNumber('(')">(</button>
+            <button class="button" onclick="appendNumber(')')">)</button>
+            <button class="button" onclick="getPreviousAnswer()">Ans</button>
+            <button class="button" onclick="calculateResult()">=</button>
+        </div>
         </div>
     </div>
 
-    <div class="recents">
+    </div>
+    <div class="recents" style="border: 1px solid #000; padding: 20px; margin-top: 20px; border-radius: 5px;">
         <h2>Recent Calculations</h2>
         <ul id="recentCalculations"></ul>
     </div>
@@ -76,6 +102,7 @@
         let currentOperation = null;
         let firstOperand = null;
         let recentCalculations = document.getElementById('recentCalculations');
+        let lastResult = 0;
 
         function negateNumber() {
             if (display.value === '') return;
@@ -85,10 +112,53 @@
             display.value += number;
         }
 
+        document.addEventListener('keydown', function(event) {
+            const key = event.key;
+            if (!isNaN(key)) {
+            appendNumber(key);
+            } else if (key === '.') {
+            appendDecimal();
+            } else if (key === '+') {
+            setOperation('+');
+            } else if (key === '-') {
+            setOperation('-');
+            } else if (key === 'x') {
+            setOperation('*');
+            } else if (key === '/') {
+            setOperation('/');
+            } else if (key === '^') {
+            setOperation('^');
+            } else if (key === 's') {
+            math.sin();
+            } else if (key === 'c') {
+            cosine();
+            } else if (key === 't') {
+            tangent();
+            } else if (key === 'l') {
+            logarithm();
+            } else if (key === 'r') {
+            squareRoot();
+            } else if (key === 'Enter') {
+            calculateResult();
+            } else if (key === 'Backspace') {
+            deleteLastCharacter();
+            } else if (key === 'Escape') {
+            clearDisplay();
+            }
+        });
+
         function appendDecimal() {
             if (!display.value.includes('.')) {
-                display.value += '.';
+            display.value += '.';
             }
+        }
+
+        function appendParenthesis(parenthesis) {
+            display.value += parenthesis;
+        }
+
+        function deleteLastCharacter() {
+            display.value = display.value.slice(0, -1);
         }
 
         function setOperation(operation) {
@@ -96,35 +166,110 @@
             firstOperand = parseFloat(display.value);
             currentOperation = operation;
             display.value = '';
+
+        }
+        function sine() {
+            if (display.value === '') return;
+            let number = parseFloat(display.value);
+            display.value = result;
+            lastResult = result;
+            display.value = result;
+            addRecentCalculation(`sin(${number}) = ${result}`);
+        }
+        
+        function logarithm() {
+            if (display.value === '') return;
+            let number = parseFloat(display.value);
+            let result = Math.log(number);
+            display.value = result;
+            addRecentCalculation(`log(${number}) = ${result}`);
         }
 
+        function squareRoot() {
+            if (display.value === '') return;
+            let number = parseFloat(display.value);
+            let result = Math.sqrt(number);
+            display.value = result;
+            addRecentCalculation(`√(${number}) = ${result}`);
+        }
+
+        function squareNumber() {
+            if (display.value === '') return;
+            let number = parseFloat(display.value);
+            let result = Math.pow(number, 2);
+            display.value = result;
+            addRecentCalculation(`${number} ^ 2 = ${result}`);
+        }
+
+        function getPreviousAnswer() {
+            display.value = lastResult;
+        }
+
+        function cosine() {
+            if (display.value === '') return;
+            let number = parseFloat(display.value);
+            let result = Math.cos(number);
+            display.value = result;
+            addRecentCalculation(`cos(${number}) = ${result}`);
+        }
+
+        function tangent() {
+            if (display.value === '') return;
+            let number = parseFloat(display.value);
+            let result = Math.tan(number);
+            display.value = result;
+            addRecentCalculation(`tan(${number}) = ${result}`);
+        }
         function calculateResult() {
             if (currentOperation === null || display.value === '') return;
             let secondOperand = parseFloat(display.value);
             let result;
             switch (currentOperation) {
-                case '+':
-                    result = firstOperand + secondOperand;
-                    break;
-                case '-':
-                    result = firstOperand - secondOperand;
-                    break;
-                case '*':
-                    result = firstOperand * secondOperand;
-                    break;
-                case '/':
-                    result = firstOperand / secondOperand;
-                    break;
-                case '^':
-                    result = Math.pow(firstOperand, secondOperand);
-                    break;
-                default:
-                    return;
+            case '+':
+                result = firstOperand + secondOperand;
+                break;
+            case '-':
+                result = firstOperand - secondOperand;
+                break;
+            case '*':
+                result = firstOperand * secondOperand;
+                break;
+            case '/':
+                result = firstOperand / secondOperand;
+                break;
+            case '^':
+                result = Math.pow(firstOperand, secondOperand);
+                break;
+            case 'sin':
+                result = Math.sin(firstOperand);
+                break;
+            case 'cos':
+                result = cosine();
+                break;
+            case 'tan':
+                result = tangent();
+                break;
+            case 'log':
+                result = logarithm();
+                break;
+            case '√':
+                result = squareRoot();
+                break;
+            case 'del':
+                deleteLastCharacter();
+                return;
+            case '(':
+            case ')':
+            case 'Ans':
+                result = lastResult;
+                break;
+                result = parseFloat(display.value);
+                break;
+            default:
+                return;
             }
+            result = parseFloat(result.toFixed(6));
             display.value = result;
-            if (currentOperation == '*') {
-                currentOperation = 'x';
-            }
             addRecentCalculation(`${firstOperand} ${currentOperation} ${secondOperand} = ${result}`);
             currentOperation = null;
             firstOperand = null;

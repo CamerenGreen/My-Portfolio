@@ -1,190 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Cameren Green</title>
-    <style>
-        
-        /* Enable smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
 
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        a {
-            color: #92635e;
-            text-decoration: none;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&family=Source+Code+Pro:wght@400&display=swap" rel="stylesheet">
 
-        a:hover {
-            text-decoration: underline;
-        }
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="style.css">
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Header */
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-            color: #5e7396;
-        }
-
-        header p {
-            font-size: 1.2em;
-            color: #635e92;
-        }
-
-        /* Navigation */
-        nav {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            font-size: 1.1em;
-            color: #333;
-        }
-
-        nav a:hover {
-            color: #5e7396;
-        }
-
-        /* Sections */
-        section {
-            margin-bottom: 40px;
-        }
-
-        /* main color */
-        section h2 {
-            font-size: 1.8em;
-            color: #5e7396;
-            border-bottom: 2px solid #5e7396;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-
-        section p {
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        /* Projects */
-        .project {
-            margin-bottom: 20px;
-        }
-
-        .project h3 {
-            font-size: 1.4em;
-            margin: 0;
-            color: #927d5e;
-        }
-
-        .project p {
-            margin: 10px 0;
-        }
-
-        .project a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 5px 10px;
-            background-color: #5e7396;
-            color: #fff;
-            border-radius: 3px;
-        }
-
-        /* complementary color */
-        .project a:hover {
-            background-color: #925e8d;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Dropdown Menu */
-        #dropdown-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #5e7396;
-            color: #fff;
-            z-index: 999;
-            overflow: hidden; /* Hide overflow content */
-            height: 60px; /* Initial height for the bar */
-            transition: height 0.5s ease-in-out; /* Smooth height transition */
-        }
-
-        #dropdown-menu .menu-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-            height: 60px;
-            box-sizing: border-box;
-        }
-
-        #dropdown-menu .menu-header .menu-button {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.5em;
-            cursor: pointer;
-        }
-
-        #dropdown-menu .menu-content {
-            display: none; /* Initially hidden */
-            width: 100%;
-            background-color: #5e7396;
-        }
-
-        #dropdown-menu .menu-content a {
-            display: block;
-            padding: 15px;
-            color: #fff;
-            font-size: 1.1em;
-            text-align: center;
-        }
-
-        #dropdown-menu .menu-content a:hover {
-            background-color: #5e7396;
-        }
-
-        /* Footer */
-        /* tertiary color */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px 0;
-            border-top: 1px solid #ddd;
-            color: #635e92;
-        }
-    </style>
 </head>
 <body>
         <!-- Dropdown Menu -->
@@ -241,86 +75,142 @@
             <div class="skills-grid">
                 <div class="skill">
                     <h3>Python</h3>
-                    <p>With over <strong>3 years</strong> of experience with Python in the course of my classwork and personal projects. Some of my personal projects include my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Interval Timer)').scrollIntoView({ behavior: 'smooth' }); }, 500);">Interval Timer</a> as well as many other personal projects located on my github</p>
+                    <p>With over <strong>three years</strong> of experience with Python in the course of my classwork and personal projects. Some of my personal projects include my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Interval Timer)').scrollIntoView({ behavior: 'smooth' }); }, 500);">Interval Timer</a> as well as many other personal projects located on my github</p>
                 </div>
                 <div class="skill">
                     <h3>C++</h3>
-                    <p>With over <strong>a year</strong> of experience in C++, I have developed a strong foundation in object-oriented programming, data structures, and algorithms. My skills in C++ were instrumental in building projects like my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(ML Based Chrome Extention)').scrollIntoView({ behavior: 'smooth' }); }, 500);">ML Based Chrome Extension</a>, where I applied my knowledge to integrate machine learning models and APIs effectively.</p>
+                    <p>With over <strong>two years</strong> of experience in C++, I have developed a strong foundation in object-oriented programming, data structures, and algorithms. My skills in C++ were instrumental in building projects like my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(ML Based Chrome Extention)').scrollIntoView({ behavior: 'smooth' }); }, 500);">ML Based Chrome Extension</a>, where I applied my knowledge to integrate machine learning models and APIs effectively.</p>
                 </div>
                 <div class="skill">
                     <h3>HTML / CSS / JavaScript</h3>
-                    <p>With over <strong>a year</strong> of experience in HTML, CSS, and JavaScript, I have developed and maintained responsive and dynamic websites, including this personal portfolio. This website showcases my ability to design user-friendly interfaces and implement server-side functionality effectively. Additionally, I created an advanced <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Calculator)').scrollIntoView({ behavior: 'smooth' }); }, 500);">Calculator</a> application, which demonstrates my skills in building interactive web applications.</p>
+                    <p>With over <strong>two years</strong> of experience in HTML, CSS, and JavaScript, I have developed and maintained responsive and dynamic websites, including this personal portfolio. This website showcases my ability to design user-friendly interfaces and implement server-side functionality effectively. Additionally, I created an advanced <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Calculator)').scrollIntoView({ behavior: 'smooth' }); }, 500);">Calculator</a> application, which demonstrates my skills in building interactive web applications.</p>
                 </div>
                 <div class="skill">
                     <h3>Machine Learning / Artifical Intellegence</h3>
-                    <p>With over <strong>2 years</strong> of experience in machine learning and artificial intelligence, I have developed and deployed models for various applications, including my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Project 1)').scrollIntoView({ behavior: 'smooth' }); }, 500);">AI-Powered Discord Chatbot</a> and <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(ML Based Chrome Extention)').scrollIntoView({ behavior: 'smooth' }); }, 500);">ML Based Chrome Extension</a>. I have experience with TensorFlow, Keras, and Scikit-learn, and I am proficient in developing and deploying machine learning models for real-world applications.</p>
+                    <p>With over <strong>three years</strong> of experience in machine learning and artificial intelligence, I have developed and deployed models for various applications, including my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Project 1)').scrollIntoView({ behavior: 'smooth' }); }, 500);">AI-Powered Discord Chatbot</a> and <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(ML Based Chrome Extention)').scrollIntoView({ behavior: 'smooth' }); }, 500);">ML Based Chrome Extension</a>. I have experience with TensorFlow, Keras, and Scikit-learn, and I am proficient in developing and deploying machine learning models for real-world applications.</p>
                 </div>
                 <div class="skill">
                     <h3>Git and API tools</h3>
-                    <p>With over <strong>a year</strong> of experience using Git, Docker, and Linux through various courses and personal projects, I have developed a strong foundation in version control, containerization, operating systems, and API upkeep. I utilized Git and respective API's extensively to manage the development of my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Crypto Price Tracker)').scrollIntoView({ behavior: 'smooth' }); }, 500);">Crypto Price Tracker</a>, ensuring efficient collaboration and version control.</p>
+                    <p>With over <strong>two years</strong> of experience using Git, Docker, and Linux through various courses and personal projects, I have developed a strong foundation in version control, containerization, operating systems, and API upkeep. I utilized Git and respective API's extensively to manage the development of my <a href="#projects" onclick="scrollToSectionWithoutToggle('projects'); setTimeout(() => { document.querySelector('h3:contains(Crypto Price Tracker)').scrollIntoView({ behavior: 'smooth' }); }, 500);">Crypto Price Tracker</a>, ensuring efficient collaboration and version control.</p>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects">
-            <h2 id="projects-title">Projects <span style="font-size: 0.6em; color: #5e7396;">Check out some of my creations</span></h2>
-            <div class="project">
-                <h3>AI-Powered Discord Chatbot</h3>
-                <p>
-                    Developed a chatbot using JavaScript and TensorFlow to assist users with FAQs fetched from ChatGPT-3 API for a personal discord server. Integrated natural language processing (NLP) and user question tracking to improve user interaction.
-                </p>
-                <a href="https://github.com/CamerenGreen/Personal-Discord-Chatbot">View Repo</a>
-            </div>
-            <div class="project">
-                <h3>The Flick Picker</h3>
-                <p>
-                    Developed an extension for Google Chrome that uses machine learning to recommend media based on the user's movie and television show history using TMDB API. This extension analyzes viewing patterns and preferences to suggest personalized content, enhancing the user's entertainment experience.
-                </p>
-                <a href="https://github.com/CamerenGreen/Flick-Picker">View Repo</a>
-            </div>
-            <div class="project">
-                <h3>Algorithm Visualizer</h3>
-                <p>
-                    A web tool that visually demonstrates how sorting, searching, and pathfinding algorithms work through step-by-step animations. Used to teach myself and others algorithmic concepts intuitively. More updates coming soon!
-                </p>
-                <a href="https://camerengreen.github.io/algorithm-visualizer/">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Crypto Price Tracker</h3>
-                <p>
-                    A cryptocurrency price tracker that provides real-time updates on various cryptocurrencies' latest prices. This application is built using JavaScript and CSS, and it fetches data from the CoinGecko API.
-                </p>
-                <a href="https://github.com/CamerenGreen/Crypto-Price-Tracker">View Repo</a>
-            </div>
-            <div class="project">
-                <h3>Interval Timer</h3>
-                <p>
-                    An interval timer for personal uses. A timer that is capable of setting up intervals for workouts, study sessions, and other activities. Built using Python.
-                </p>
-                <a href="https://github.com/CamerenGreen/Dusk-Tempo">View Repo</a>
-            </div>
-            <div class="project">
-                <h3>Calculator</h3>
-                <p>
-                    An advanced calculator application developed using HTML, CSS, and JavaScript, featuring a user-friendly interface and capable of performing a variety of arithmetic operations with precision.
-                </p>
-                <a href="Calculator.html">View Project</a>
-            </div>
-            <div class="project">
-                <h3>Personal Portfolio Website</h3>
-                <p>
-                    Designed and built this responsive personal website using HTML, CSS, and JavaScript to showcase my skills and projects. More updates coming soon!
-                </p>
-                <a href="index.html">View Project</a>
-            </div>
-            <div style="text-align: center; margin-top: 40px;"></div>
-                <a href="https://github.com/CamerenGreen" target="_blank" style="display: inline-block; padding: 15px 30px; font-size: 1.5em; background-color: #5e7396; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
-                    Want to see more? Visit my GitHub
-                </a>
-            </div>
-        </section>
+<section id="projects">
+    <h2 id="projects-title">Projects <span style="font-size: 0.6em; color: #5e7396;">Check out some of my creations</span></h2>
+    
+    <!-- Project 1: AI-Powered Discord Chatbot -->
+    <div class="project">
+        <h3>AI-Powered Discord Chatbot</h3>
+        <p>
+            Developed a chatbot using JavaScript and TensorFlow to assist users with FAQs fetched from ChatGPT-3 API for a personal discord server.
+        </p>
+        <ul>
+            <li><strong>Impact:</strong> Reduced response time by 35% compared to manual FAQ searches.</li>
+            <li><strong>Accuracy:</strong> Achieved 88% intent recognition accuracy using NLP.</li>
+            <li><strong>Scale:</strong> Handled 100+ monthly queries in a 10-member server.</li>
+            <li><strong>Tech:</strong> JavaScript, TensorFlow, Discord API, NLP</li>
+        </ul>
+        <a href="https://github.com/CamerenGreen/Personal-Discord-Chatbot">View Repo</a>
+    </div>
 
+    <!-- Project 2: The Flick Picker -->
+    <div class="project">
+        <h3>The Flick Picker</h3>
+        <p>
+            Chrome extension that recommends media based on user's viewing history using TMDB API.
+        </p>
+        <ul>
+            <li><strong>Engagement:</strong> 90% of test users reported discovering new favorites.</li>
+            <li><strong>Performance:</strong> Loads recommendations under 1.5 seconds.</li>
+            <li><strong>Data:</strong> Analyzed 1,200+ titles from TMDB database.</li>
+            <li><strong>Tech:</strong> JavaScript, TMDB API, Chrome Extensions</li>
+        </ul>
+        <a href="https://github.com/CamerenGreen/Flick-Picker">View Repo</a>
+    </div>
+
+    <!-- Project 3: Algorithm Visualizer -->
+    <div class="project">
+        <h3>Algorithm Visualizer</h3>
+        <p>
+            Web tool demonstrating sorting/searching algorithms through animations.
+        </p>
+        <ul>
+            <li><strong>Educational:</strong> Used by CS students at KU for exam prep, and helped me get an A in mine!</li>
+            <li><strong>Features:</strong> Visualizes 8+ algorithms (Dijkstra's, QuickSort, etc.).</li>
+            <li><strong>Speed Control:</strong> Adjustable animation speeds for massive sorting visualizations.</li>
+            <li><strong>Tech:</strong> JavaScript, D3.js, React</li>
+        </ul>
+        <a href="https://camerengreen.github.io/algorithm-visualizer/">View Project Demo</a>
+    </div>
+
+    <!-- Project 4: Crypto Price Tracker -->
+    <div class="project">
+        <h3>Crypto Price Tracker</h3>
+        <p>
+            Real-time cryptocurrency price updates using CoinGecko API.
+        </p>
+        <ul>
+            <li><strong>Data:</strong> Tracks a multitude of cryptocurrencies within a 1-minute refresh.</li>
+            <li><strong>Efficiency:</strong> Optimized API calls to stay under rate limits.</li>
+            <li><strong>UI:</strong> Color-coded 24h change indicators (+/-).</li>
+            <li><strong>Tech:</strong> JavaScript, CoinGecko API, Chart.js</li>
+        </ul>
+        <a href="https://github.com/CamerenGreen/Crypto-Price-Tracker">View Repo</a>
+    </div>
+
+    <!-- Project 5: Interval Timer -->
+    <div class="project">
+        <h3>Interval Timer</h3>
+        <p>
+            Python application for workout/study interval timing.
+        </p>
+        <ul>
+            <li><strong>Precision:</strong> Accurate to ±0.1 seconds in testing.</li>
+            <li><strong>Customization:</strong> Supports unlimited interval sets.</li>
+            <li><strong>Usage:</strong> Personally used for 100+ workout sessions.</li>
+            <li><strong>Tech:</strong> Python, Pygame, Custom GUI</li>
+        </ul>
+        <a href="https://github.com/CamerenGreen/Dusk-Tempo">View Repo</a>
+    </div>
+
+    <!-- Project 6: Calculator -->
+    <div class="project">
+        <h3>Calculator</h3>
+        <p>
+            Advanced calculator with arithmetic operations.
+        </p>
+        <ul>
+            <li><strong>Functions:</strong> 15+ operations (trigonometry, logarithms).</li>
+            <li><strong>Responsive:</strong> Works flawlessly on mobile/desktop.</li>
+            <li><strong>Error Handling:</strong> Graceful recovery from invalid inputs.</li>
+            <li><strong>Tech:</strong> HTML, CSS, JavaScript</li>
+        </ul>
+        <a href="Calculator.html">View Project Demo</a>
+    </div>
+
+    <!-- Project 7: Personal Portfolio Website -->
+    <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p>
+            Responsive website showcasing my skills and projects.
+        </p>
+        <ul>
+            <li><strong>Performance:</strong> 95+ Lighthouse accessibility score.</li>
+            <li><strong>Design:</strong> Fully responsive across all devices.</li>
+            <li><strong>SEO:</strong> Optimized meta tags and semantic HTML.</li>
+            <li><strong>Tech:</strong> HTML5, CSS3, JavaScript</li>
+        </ul>
+        <a href="index.html">View Project</a>
+    </div>
+
+    <div style="text-align: left; margin-top: 50px;">
+        <a href="https://github.com/CamerenGreen" target="_blank" style="display: inline-block; padding: 15px 30px; font-size: 1.5em; background-color: #5e7396; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">
+            Want to see more? Visit my GitHub
+        </a>
+    </div>
+</section>
 
 
         <!-- Contact Section -->

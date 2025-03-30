@@ -26,7 +26,7 @@
 1. Clone repo:
    ```bash
    git clone https://github.com/CamerenGreen/portfolio.git
-   open index.html in your browser
+2. open index.html in your browser
 
 ## Thanks for visiting!
 Feel free to use as a template for your own portfolio!

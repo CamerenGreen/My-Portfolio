@@ -104,6 +104,40 @@ section {
   padding-top: 60px; /* For fixed header offset */
 }
 
+/* Profesional Experience */
+.experience {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.experience h3 {
+  margin-top: 0;
+  color: #5e7396;
+}
+
+.experience .role {
+  font-weight: 600;
+  color: #927d5e;
+  margin-bottom: 5px;
+}
+
+.experience .duration {
+  font-size: 0.95em;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.experience ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.experience li {
+  margin-bottom: 6px;
+}
+
 /* Projects */
 .project {
   margin-bottom: 30px;

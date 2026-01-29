@@ -4,7 +4,6 @@
 [View Live Portfolio](https://camerengreen.github.io/My-Portfolio/) 
 
 ## Features
-- **Modern Design**: Clean, responsive layout with Montserrat typography
 - **Project Showcase**: Detailed case studies with metrics and technologies
 - **Interactive Elements**: Smooth dropdown menu and scroll animations
 - **Skills Visualization**: Organized grid of technical competencies
@@ -14,10 +13,6 @@
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Fonts**: Inter
 - **Hosting**: Here on GitHub Pages
-
-
-## Design Highlights
-
 
 ## Thanks for visiting!
 - **Updates coming soon**

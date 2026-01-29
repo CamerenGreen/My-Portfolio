@@ -21,7 +21,7 @@
 
 ## Thanks for visiting!
 - **Updates coming soon**
-- 
+
 scrape it all you want man please give me a job
 
 💻 Maintained by Cameren Green

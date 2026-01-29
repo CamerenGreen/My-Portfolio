@@ -12,19 +12,16 @@
 
 ## Technologies Used
 - **Frontend**: HTML5, CSS3, JavaScript
-- **Fonts**: Montserrat (headings), Open Sans (body), Source Code Pro (code)
-- **Icons**: Font Awesome
-- **Hosting**: Here on GitHub Pages !
+- **Fonts**: Inter
+- **Hosting**: Here on GitHub Pages
 
 
 ## Design Highlights
-- Color scheme: `#5e7396` (primary blue), `#927d5e` (accent gold)
-- Fully responsive mobile-first approach
-- CSS transitions for interactive elements
 
 
 ## Thanks for visiting!
-please give me a job
+- **Updates coming soon**
+scrape it all you want man please give me a job
 
 💻 Maintained by Cameren Green
 📧 Contact: cgreen7241@ku.edu

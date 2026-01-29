@@ -22,8 +22,9 @@
         <nav>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Internships</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="Cameren_Green_Resume.pdf" target="_blank">Resume</a></li>
             </ul>
@@ -38,7 +39,7 @@
                 <h1 style="font-size:2.5rem;margin:0 0 0.6rem;"><span spellcheck="false">Cameren Green</span></h1>
                 <p style="margin:0 0 1.25rem;font-size:1.125rem;color:#555;">Computer Science @ University of Kansas</p>
                 <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;">
-                    <a href="#projects" class="btn-primary" style="padding:0.65rem 1rem;border-radius:6px;text-decoration:none;">View My Work</a>
+                    <a href="#projects" onclick="scrollToSectionWithoutToggle('projects')" class="btn-primary" style="padding:0.65rem 1rem;border-radius:6px;text-decoration:none;">View My Work</a>
                 </div>
             </div>
         </section>
@@ -50,8 +51,8 @@
         <div class="about-content">
             <div class="about-box">
             <h3>My Journey</h3>
-            <p>I'm a Computer Science student at the University of Kansas with a passion for creating innovative solutions using cutting-edge technologies.</p>
-            <p>My focus lies at the intersection of AI, cloud architecture, and software development. I'm driven by the potential of technology to solve complex problems and create a positive impact to the world.</p>
+            <p>I'm a Computer Science student at the University of Kansas with a passion for solving real world problems using innovative solutions using various technologies.</p>
+            <p>My focus lies at the intersection of cybersecurity, cloud architecture, and software development. I'm driven by the potential of technology to solve problems and create a positive impact to the world.</p>
             </div>
             <div class="about-box">
             <h3>Education</h3>
@@ -73,9 +74,11 @@
                 <p><strong>Brites Technology Solutions</strong> - Bangkok, Thailand</p>
                 <p style="margin: 0 0 0.05em 0; font-size: 0.98em; color: #666;">September 2025 - December 2025</p>
                 <ul>
-                    <li>Designed, developed, and maintained backend systems using Visual Studio Code, leveraging Python, Java, and Go.</li>
-                    <li>Utilized Git and GitHub for source control management, enabling efficient version control and collaboration with paired programming and code review</li>
+                    <li>Built a real-time alerting backend service that cross-references detected data against a pre-existing database, logging matches.</li>
+                    <li>Reduced alert generation time from manual batch processing (hours) to under 2 seconds, granting a 99.999% optimization from ~100000 searches daily.</li>
+                    <li>Wrote optimized SQL and Python and used internal REST APIs to send data alerts to databases</li>
                     <li>Collaborated with Product Owners and Scrum Masters in Agile ceremonies including daily stand-ups, sprint planning, retrospectives, and backlog grooming to ensure that sprint deliverables met requirements and timelines</li>
+                    <li>Created live proof-of-concept deployments under the guidance of the technical leadership team</li>
                 </ul>
             </div>
             <div class="experience-box card" style="margin-top: 1.5rem;">
@@ -93,7 +96,7 @@
 
     <!-- ========== PROJECTS ========== -->
     <section id="projects" class="section">
-        <div class="section-title">Projects</div>
+        <div class="section-title">Featured Projects</div>
         <div class="grid">
             <!-- Example Project -->
             <div class="card">
@@ -110,6 +113,14 @@
                     <li>Interactive web application developing a dynamic waveform and frequency spectrum rendering</li>
                     <li>Gesture-controlled audio web app using MediaPipe and JS.</li>
                     <p><a href="https://github.com/CamerenGreen/VisionEQ" target="_blank">View Repo</a></p>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>TrainTrace BKK</h3>
+                <ul>
+                    <li>Created an automated web scraping pipeline using to extract transit data from offcial BTS and MRT timetables.</li>
+                    <li>Used obtained data to develop an app that tracked and optimized train routes, as well as calculated fare costs.</li>
+                    <li>App made with Flutter and Java / Scraper made with Python</li>
                 </ul>
             </div>
             <div class="card">
@@ -218,7 +229,7 @@
 
     <!-- ========== CONTACT ========== -->
     <section id="contact" class="section">
-        <div class="section-title">Contact</div>
+        <div class="section-title">Connect with me</div>
         <div class="contact-info">
             <p>Email: <a href="mailto:cgreen7241@ku.edu">cgreen7241@ku.edu</a></p>
             <p>LinkedIn: <a href="https://linkedin.com/in/cameren-green-830164244" target="_blank">View Profile</a></p>
@@ -228,8 +239,25 @@
 
     <!-- ========== FOOTER ========== -->
     <footer>
-        <p>&copy; 2025 Cameren Green. All rights reserved.</p>
+        <p>&copy; 2026 Cameren Green. All rights reserved.</p>
     </footer>
-</body>
 
+    <script>
+        // Scroll to a specific section with smooth animation
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Scroll to a specific section without toggling the dropdown
+        function scrollToSectionWithoutToggle(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</body>
 </html>

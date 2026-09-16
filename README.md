@@ -17,7 +17,7 @@
 ## Thanks for visiting!
 - **Updates coming soon**
 
-please give me a shot
+please hire me
 
 💻 Maintained by Cameren Green
 📧 Contact: cgreen7241@ku.edu

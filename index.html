@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Cameren Green, Computer Science student and software developer.">
+  <title>Cameren Green | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Source+Code+Pro:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+  <div id="dropdown-menu">
+    <div class="menu-header">
+      <span>Cameren Green</span>
+      <button class="menu-button" id="menu-button" aria-controls="menu-content" aria-expanded="false" aria-label="Open navigation menu">&#9776;</button>
+    </div>
+    <nav class="menu-content" id="menu-content" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <a href="Cameren_Green25262nd.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      <a href="https://www.linkedin.com/in/cameren-green-830164244/" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+  </div>
+
+  <main class="page">
+    <header class="hero">
+      <img class="portrait" src="KU Engineering Career Fair Spring 2025-11.jpg" alt="Cameren Green at the KU Engineering Career Fair">
+      <div>
+        <p class="eyebrow">Computer Science @ KU · Lawrence, Kansas</p>
+        <h1>Cameren Green</h1>
+        <h2>software developer/cybersecurity engineer.</h2>
+        <p>I am a Computer Science student at the University of Kansas who enjoys applying data structures, algorithms, software engineering, and AI to practical projects.</p>
+        <div class="hero-links">
+          <a class="button" href="#projects">View projects</a>
+          <a class="button secondary" href="Cameren_Green25262nd.pdf" target="_blank" rel="noopener">View resume</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="intro">My coursework and personal projects have built a strong foundation in various domains.</p>
+      <div class="education">
+        <div class="item-heading"><div><h3>University of Kansas</h3><p>Bachelor's Degree, Computer Science</p></div><span class="date">Expected May 2027</span></div>
+        <p><strong>Relevant coursework:</strong> Data Structures and Algorithms, Linear Algebra, Probability and Statistics, Discrete Structures, Embedded Systems, Operating Systems, Programming I/II, Programming Paradigms, and Software Engineering I/II.</p>
+      </div>
+      <article class="education">
+        <div class="item-heading"><div><h3>Study Abroad Semester Exchange</h3><p>Sirindhorn International Institute of Technology (SIIT), Thammasat University</p></div><span class="date">January 2026 - May 2026</span></div>
+        <p>Bangkok City, Thailand · On-site</p>
+        <ul>
+          <li>Gained in-depth knowledge of data structures and algorithms, machine learning, and artificial intelligence.</li>
+          <li>Improved written and oral Thai-language communication.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <article class="experience">
+        <div class="item-heading"><div><h3>Cyber Security Engineer Intern</h3><p>Brites Technology Solutions</p></div><span class="date">September 2025 - December 2025</span></div>
+        <ul>
+          <li>Designed, developed, and maintained responsive, optimized SQL and Python scripts, and used internal REST APIs to send data alerts to databases.</li>
+          <li>Built an alerting backend service that compared data against a pre-existing database, logging matches.</li>
+          <li>Optimized alert generation time from manual batch processing (hours) to under 2 seconds.</li>
+          <li>Created proof-of-concept deployments under guidance of the technical leadership team in an Agile environment.</li>
+          <li>Collaborated cross-functionally through Slack and Microsoft Teams for real-time communication and project coordination.</li>
+        </ul>
+      </article>
+      <article class="experience">
+        <div class="item-heading"><div><h3>Quality Assurance Intern</h3><p>Oigetit AI Fact-Checker</p></div><span class="date">October 2025 - December 2025</span></div>
+        <p>Remote</p>
+        <ul>
+          <li>Identified, documented, and reported software bugs and defects using detailed daily reports.</li>
+          <li>Assessed software design and overall user experience from quality and usability perspectives.</li>
+          <li>Participated in special projects with cross-functional teams to support company initiatives.</li>
+        </ul>
+      </article>
+      <article class="experience">
+        <div class="item-heading"><div><h3>Desk Assistant</h3><p>University of Kansas</p></div><span class="date">August 2023 - Present</span></div>
+        <p>On-site · Part-time</p>
+        <ul>
+          <li>Creates a welcoming and supportive environment for residents and visitors.</li>
+          <li>Monitors access and helps ensure resident safety.</li>
+          <li>Maintains detailed logs and records with close attention to detail.</li>
+          <li>Streamlines front-desk operations, communication, and administrative processes.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="intro">Selected work spanning interactive web experiences, machine learning, embedded systems, cybersecurity, and developer tools.</p>
+      <div class="projects">
+        <article class="project"><h3>FlickPicker</h3><p>Full-stack Google Chrome extension that uses a machine-learning model and the TMDB API to recommend media from a user's watch history.</p><ul><li>Analyzed 1,200+ TMDB titles and loads recommendations in under 1.5 seconds.</li><li>90% of test users reported discovering new favorites.</li></ul><div class="project-links"><a class="button" href="https://github.com/CamerenGreen/Flick-Picker" target="_blank" rel="noopener">View repository</a></div></article>
+        <article class="project"><h3>VisionEQ</h3><p>Interactive web application for hand gesture-controlled audio volume and frequency, with a dynamic waveform and spectrum visualization.</p><ul><li>Uses MediaPipe Hands for approximately ±5 px finger-position detection and Web Audio API for real-time visuals.</li><li>Offers Volume Control, Audio Equalizer, and Lock modes with live UI feedback.</li></ul><div class="project-links"><a class="button" href="https://github.com/CamerenGreen/VisionEQ" target="_blank" rel="noopener">View repository</a></div></article>
+        <article class="project"><h3>Algorithm Visualizer</h3><p>Interactive visual algorithm website with Three.js animations for sorting and searching concepts.</p><ul><li>Visualizes 10+ algorithms, including Dijkstra's and QuickSort.</li><li>Includes adjustable animation speeds for larger visualizations.</li></ul><div class="project-links"><a class="button" href="https://camerengreen.github.io/algorithm-visualizer/" target="_blank" rel="noopener">View live project</a></div></article>
+        <article class="project"><h3>Crypto Price Analysis Dashboard</h3><p>Real-time dashboard that tracks and displays live cryptocurrency prices through the CoinGecko API.</p><ul><li>Uses smart caching and request batching to reduce API calls by 40% while maintaining real-time accuracy.</li><li>Features color-coded 24-hour change indicators and sub-200 ms cold starts.</li></ul><div class="project-links"><a class="button" href="https://github.com/CamerenGreen/Crypto-Price-Tracker" target="_blank" rel="noopener">View repository</a></div></article>
+        <article class="project"><h3>TrainTrace BKK</h3><p>Full-stack, real-time train-tracking mobile application built with Flutter for Bangkok's BTS and MRT networks.</p><ul><li>Built a Python script to extract 2,000+ data points from official BTS and MRT timetables.</li><li>Developed route tracking and optimization with fare-cost calculations.</li><li>Applied pathfinding algorithms that account for transfers, walking distances, and fare costs.</li></ul></article>
+        <article class="project"><h3>Self-Operating LiDAR Braking System</h3><p>Embedded-system prototype for autonomous vehicle braking functions.</p><ul><li>Designed real-time measurement logic for multi-level braking.</li><li>Integrated a deep neural-network model over UART between a Raspberry Pi and HiFive microcontroller.</li><li>Improved projected battery-powered deployment efficiency by 15% through duty cycling.</li><li>Led a two-person team to a full-stack prototype with a 100% demo success rate.</li></ul></article>
+        <article class="project"><h3>Personal AI Management Assistant</h3><p>Transformative AI-powered communication tool developed in February 2025.</p></article>
+        <article class="project"><h3>Cybersecurity Passcode Guessing Game</h3><p>Cybersecurity-focused project built from July 2025 to present.</p><ul><li>Built a custom chained hash table for O(1) password storage and retrieval while preventing collisions.</li><li>Developed a prefix tree for efficient IP-address whitelist and blacklist filtering.</li><li>Designed a Bloom filter for malicious-URL detection with minimal memory overhead, achieving 96% URL-filtering accuracy.</li><li>Implemented the Aho-Corasick algorithm in Java for multi-pattern matching in intrusion-detection systems.</li><li>Created encrypted key-value storage using linked lists and encryption safeguards.</li></ul></article>
+        <article class="project"><h3>AWS Identity &amp; Access Management Service</h3><p>Cloud identity and access management service, in development since June 2025.</p><ul><li>Designed IAM policies that enforce least-privilege access for users, groups, and roles.</li></ul></article>
+        <article class="project"><h3>AI-Powered Discord Chatbot</h3><p>JavaScript and TensorFlow chatbot that assists a personal Discord server with FAQs through the ChatGPT-3 API.</p><ul><li>Achieved 88% intent-recognition accuracy and reduced response time by 35% versus manual FAQ searches.</li><li>Handled 100+ monthly queries in a 10+ member server.</li></ul><div class="project-links"><a class="button" href="https://github.com/CamerenGreen/Personal-Discord-Chatbot" target="_blank" rel="noopener">View repository</a></div></article>
+        <article class="project"><h3>Personal Interval Timer</h3><p>Python application for customized workout and study interval timing.</p><ul><li>Supports unlimited interval sets and tested to ±0.1-second accuracy.</li><li>Used personally in 100+ workout sessions.</li></ul><div class="project-links"><a class="button" href="https://github.com/CamerenGreen/Dusk-Tempo" target="_blank" rel="noopener">View repository</a></div></article>
+        <article class="project"><h3>Calculator</h3><p>Responsive calculator with arithmetic, trigonometric, and logarithmic operations plus graceful invalid-input handling.</p><ul><li>Includes 15+ operations and works across mobile and desktop screens.</li></ul><div class="project-links"><a class="button" href="Calculator.html">View project</a></div></article>
+        <article class="project"><h3>Personal Portfolio Website</h3><p>Responsive portfolio website showcasing projects, technical skills, and contact information.</p><ul><li>Built with semantic HTML and optimized metadata; designed for accessibility and responsive layouts.</li><li>Recorded a 95+ Lighthouse accessibility score.</li></ul><div class="project-links"><a class="button" href="index.html">View current site</a></div></article>
+      </div>
+      <p><a class="button" href="https://github.com/CamerenGreen" target="_blank" rel="noopener">Explore more on GitHub</a></p>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-group"><h3>Languages</h3><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">Rust</span><span class="tag">Elixir</span><span class="tag">Go</span><span class="tag">R</span><span class="tag">Scala</span><span class="tag">SQL</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">HTML/CSS</span><span class="tag">MATLAB</span><span class="tag">Assembly</span></div></div>
+        <div class="skill-group"><h3>Frameworks &amp; Libraries</h3><div class="tags"><span class="tag">React.js</span><span class="tag">Redux.js</span><span class="tag">Node.js</span><span class="tag">Django</span><span class="tag">Flask</span><span class="tag">PyTorch</span><span class="tag">TensorFlow</span><span class="tag">scikit-learn</span><span class="tag">REST APIs</span></div></div>
+        <div class="skill-group"><h3>Cloud, Tools &amp; Practices</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Linux/Unix</span><span class="tag">Visual Studio Code</span><span class="tag">Splunk</span><span class="tag">Databricks</span><span class="tag">CI/CD</span><span class="tag">Agile</span><span class="tag">Scrum</span></div></div>
+        <div class="skill-group"><h3>AI &amp; Machine Learning</h3><div class="tags"><span class="tag">AI</span><span class="tag">OpenAI</span><span class="tag">Large Language Models</span><span class="tag">Prompt Engineering</span><span class="tag">Computer Vision</span><span class="tag">Natural Language Processing</span></div></div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Connect With Me</h2>
+      <p>Feel free to reach out to collaborate or learn more about my work.</p>
+      <div class="contact-links">
+        <a class="button" href="mailto:greencmaeren@gmail.com">Email</a>
+        <a class="button" href="mailto:cgreen7241@ku.edu">KU Email</a>
+        <a class="button" href="tel:+14025910661">Call</a>
+        <a class="button" href="https://www.linkedin.com/in/cameren-green-830164244/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="button" href="https://github.com/CamerenGreen" target="_blank" rel="noopener">GitHub</a>
+        <a class="button" href="Cameren_Green25262nd.pdf" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </section>
+  </main>
+  <footer>&copy; <span id="year"></span> Cameren Green. Designed and developed exclusively by Cameren Green.</footer>
+  <script>
+    const menu = document.getElementById('dropdown-menu');
+    const button = document.getElementById('menu-button');
+    const content = document.getElementById('menu-content');
+    function setMenu(open) { menu.style.height = open ? '380px' : '60px'; content.style.display = open ? 'block' : 'none'; button.setAttribute('aria-expanded', open); button.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu'); }
+    button.addEventListener('click', () => setMenu(button.getAttribute('aria-expanded') !== 'true'));
+    content.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
